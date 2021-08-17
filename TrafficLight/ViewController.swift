@@ -29,10 +29,14 @@ class ViewController: UIViewController {
 
         
     @IBAction func startPressButthon() {
+        
+        startPressButthonOutlet.setTitle("NEXT", for: .normal)
+        
         let lightArray = [redLightView, yellowLightView, greenLightView]
         
         switch numberColor {
         case 0:
+            
             lightArray[2]?.alpha = 0.3
             lightArray[numberColor]?.alpha = 1
             numberColor += 1
