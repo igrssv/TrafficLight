@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     var numberColor = 0
     
     @IBOutlet weak var redLightView: UIView!
@@ -18,18 +17,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var greenLightView: UIView!
     
-    
     @IBOutlet weak var startPressButthonOutlet: UIButton!
     
+
+    
     override func viewDidLoad() {
-       
-        redLightView.layer.cornerRadius = 100
-        yellowLightView.layer.cornerRadius = 100
-        greenLightView.layer.cornerRadius = 100
-        startPressButthonOutlet.layer.cornerRadius = 10
-        
+        createCornerRadius()
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
@@ -53,6 +47,13 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    fileprivate func createCornerRadius() {
+        redLightView.layer.cornerRadius = 75
+        yellowLightView.layer.cornerRadius = 75
+        greenLightView.layer.cornerRadius = 75
+        startPressButthonOutlet.layer.cornerRadius = 10
     }
     
     
