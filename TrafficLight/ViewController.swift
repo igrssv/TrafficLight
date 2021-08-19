@@ -31,22 +31,20 @@ class ViewController: UIViewController {
     @IBAction func startPressButthon() {
         
         startPressButthonOutlet.setTitle("NEXT", for: .normal)
-        
-        let lightArray = [redLightView, yellowLightView, greenLightView]
-        
+                
         switch numberColor {
         case 0:
             
-            lightArray[2]?.alpha = 0.3
-            lightArray[numberColor]?.alpha = 1
+            greenLightView.alpha = 0.3
+            redLightView.alpha = 1
             numberColor += 1
         case 1:
-            lightArray[numberColor - 1]?.alpha = 0.3
-            lightArray[numberColor]?.alpha = 1
+            redLightView.alpha = 0.3
+            yellowLightView.alpha = 1
             numberColor += 1
         case 2:
-            lightArray[numberColor - 1]?.alpha = 0.3
-            lightArray[numberColor]?.alpha = 1
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1
             numberColor = 0
         default:
             break
